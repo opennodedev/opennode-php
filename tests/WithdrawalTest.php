@@ -21,7 +21,7 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
 
 
 
-    public function testCreateInvalidCharge()
+    public function testCreateInvalidWithdrawal()
     {
         $this->expectException(BadRequest::class);
         $this->assertFalse(Merchant\Withdrawal::create(array(), self::getWriteAuthParams()));
@@ -30,7 +30,7 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
         $this->assertFalse(Merchant\Withdrawal::createOrFail(array(), self::getWriteAuthParams()));
     }
 
-    public function testCreateUnauthorizedCharge()
+    public function testCreateUnauthorizedWitdrawal()
     {
         $this->expectException(Unauthorized::class);
         $this->assertFalse(Merchant\Withdrawal::create(array(), self::getReadAuthParams()));
@@ -41,7 +41,7 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
 
     }
 
-    public function testCreateValidCharge()
+    public function testCreateValidWithdrawal()
     {
         $this->assertNotFalse(Merchant\Withdrawal::create(self::getWithdrawalParams(), self::getWriteAuthParams()));
     }
