@@ -1,5 +1,7 @@
 # OpenNode PHP library for API v1
 
+[![Build Status](https://travis-ci.org/opennodedev/opennode-php.svg?branch=master)](https://travis-ci.org/opennodedev/opennode-php)
+
 PHP library for OpenNode API.
 
 You can sign up for a OpenNode account at <https://opennode.co> for production and <https://dev.opennode.co> for testing.
