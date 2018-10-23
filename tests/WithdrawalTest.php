@@ -15,6 +15,7 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
 
     public function testGetWithdrawal()
     {
+        sleep(3);
         $order = Merchant\Withdrawal::create(self::getWithdrawalParams(), self::getWriteAuthParams());
         $this->assertNotFalse(Merchant\Withdrawal::find($order->id, self::getWriteAuthParams()));
     }
@@ -23,6 +24,7 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
 
     public function testCreateInvalidWithdrawal()
     {
+        sleep(3);
         $this->expectException(BadRequest::class);
         $this->assertFalse(Merchant\Withdrawal::create(array(), self::getWriteAuthParams()));
         sleep(3);
