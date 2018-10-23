@@ -25,7 +25,7 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
     {
         $this->expectException(BadRequest::class);
         $this->assertFalse(Merchant\Withdrawal::create(array(), self::getWriteAuthParams()));
-
+        sleep(3);
         $this->expectException(BadRequest::class);
         $this->assertFalse(Merchant\Withdrawal::createOrFail(array(), self::getWriteAuthParams()));
     }
@@ -34,9 +34,10 @@ class WithdrawalTest extends \PHPUnit\Framework\TestCase
     {
         $this->expectException(Unauthorized::class);
         $this->assertFalse(Merchant\Withdrawal::create(array(), self::getReadAuthParams()));
-
+        sleep(3);
         $this->expectException(Unauthorized::class);
         $this->assertFalse(Merchant\Withdrawal::createOrFail(array(), self::getReadAuthParams()));
+        sleep(3);
 
     }
 
