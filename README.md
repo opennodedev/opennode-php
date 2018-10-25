@@ -8,6 +8,14 @@ You can sign up for a OpenNode account at <https://opennode.co> for production a
 
 Please note, that for testing you must generate separate API credentials on <https://dev.opennode.co>. API credentials generated on <https://opennode.co> will only work in production mode.
 
+## Composer Installation
+
+Install library via [Composer](http://getcomposer.org/). Run the following command in your terminal:
+
+```bash
+composer require opennode/opennode-php
+```
+
 ## Manual Installation
 
 Donwload [latest release](https://github.com/opennodedev/opennode-php/releases) and include `init.php` file.
