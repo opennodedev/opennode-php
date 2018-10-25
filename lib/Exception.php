@@ -1,6 +1,5 @@
 <?php
 namespace OpenNode;
-use ApiError;
 
 class Exception
 {
