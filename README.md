@@ -58,7 +58,7 @@ $charge = \OpenNode\Merchant\Charge::find('c1cddabe-c27b-44a6-91e8-a8f3553dc5c7'
     'auth_token' => 'YOUR_AUTH_TOKEN'));
 ```
 
-### Creating Chrage
+### Creating Charge
 
 ```php
 use OpenNode\OpenNode;
@@ -78,10 +78,11 @@ $charge_params = array(
 try {
   $charge = \OpenNode\Merchant\Charge::create($charge_params);
 
-  echo 'LN BOLT11: ' . $charge->lightning_invoice->payreq;
-  echo 'BTC address: ' . $charge->chain_invoice->address
+  echo 'LN BOLT11: ' . $charge->lightning_invoice["payreq"].PHP_EOL;
+  echo 'BTC address: ' . $charge->chain_invoice->address;
 
   print_r($charge);
+  
 } catch (Exception $e) {
   echo $e->getMessage(); // InvalidRequest Error creating order
 }
