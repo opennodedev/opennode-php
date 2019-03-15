@@ -79,7 +79,7 @@ try {
   $charge = \OpenNode\Merchant\Charge::create($charge_params);
 
   echo 'LN BOLT11: ' . $charge->lightning_invoice["payreq"].PHP_EOL;
-  echo 'BTC address: ' . $charge->chain_invoice->address;
+  echo 'BTC address: ' . $charge->chain_invoice['address'];
 
   print_r($charge);
   
