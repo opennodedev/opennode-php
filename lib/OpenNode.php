@@ -56,7 +56,7 @@ class OpenNode
             \OpenNode\Exception::throwException(400, array('reason' => 'BadEnvironment', 'message' => "Environment does not exist. Available environments: $availableEnvironments"));
         }
 
-        $url       = ($environment === 'dev' ? 'https://dev-api.opennode.co/v1' : 'https://api.opennode.co/v1') . $url;
+        $url       = ($environment === 'dev' ? 'https://dev-api.opennode.com/v1' : 'https://api.opennode.com/v1') . $url;
         $headers   = array();
         $headers[] = 'Authorization: ' . $auth_token;
         $curl      = curl_init();
