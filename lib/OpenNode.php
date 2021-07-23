@@ -84,7 +84,7 @@ class OpenNode
         $response    = json_decode(curl_exec($curl), TRUE);
         $http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-        if (array_key_exists('data', $response)){
+        if (is_array($response) && array_key_exists('data', $response)){
             return $response['data'];
         }
         else {
