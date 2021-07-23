@@ -55,8 +55,12 @@ class OpenNode
             $availableEnvironments = join(', ', $environments);
             \OpenNode\Exception::throwException(400, array('reason' => 'BadEnvironment', 'message' => "Environment does not exist. Available environments: $availableEnvironments"));
         }
+        $version = 'v1';
+        if ($url === '/withdrawals' && $method === 'POST') {
+          $version = 'v2';
+        }
 
-        $url       = ($environment === 'dev' ? 'https://dev-api.opennode.co/v1' : 'https://api.opennode.co/v1') . $url;
+        $url       = ($environment === 'dev' ? 'https://dev-api.opennode.com/'.$version : 'https://api.opennode.com/'.$version ) . $url;
         $headers   = array();
         $headers[] = 'Authorization: ' . $auth_token;
         $curl      = curl_init();

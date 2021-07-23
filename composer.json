@@ -3,7 +3,7 @@
     "description": "OpenNode PHP library for API v1",
     "type": "library",
     "version": "1.0.0",
-    "homepage": "https://opennode.co",
+    "homepage": "https://opennode.com",
     "keywords": [
       "bitcoin",
       "payment",
@@ -16,7 +16,7 @@
     "authors": [
         {
             "name": "João Almeida",
-            "email": "joao@opennode.co"
+            "email": "joao@opennode.com"
         }
     ],
     "minimum-stability": "dev",

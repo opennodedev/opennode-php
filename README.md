@@ -4,9 +4,9 @@
 
 PHP library for OpenNode API.
 
-You can sign up for a OpenNode account at <https://opennode.co> for production and <https://dev.opennode.co> for testing.
+You can sign up for a OpenNode account at <https://m> for production and <https://dev.opennode.com> for testing.
 
-Please note, that for testing you must generate separate API credentials on <https://dev.opennode.co>. API credentials generated on <https://opennode.co> will only work in production mode.
+Please note, that for testing you must generate separate API credentials on <https://dev.opennode.com>. API credentials generated on <https://opennode.com> will only work in production mode.
 
 ## Composer Installation
 
@@ -28,7 +28,7 @@ require_once('/path/opennode-php/init.php');
 
 OpenNode PHP library instructions.
 
-https://opennode.co/docs
+https://developers.opennode.com
 
 ### Setting up OpenNode library
 
@@ -82,7 +82,7 @@ try {
   echo 'BTC address: ' . $charge->chain_invoice['address'];
 
   print_r($charge);
-  
+
 } catch (Exception $e) {
   echo $e->getMessage(); // InvalidRequest Error creating order
 }
