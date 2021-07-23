@@ -4,7 +4,7 @@
 
 PHP library for OpenNode API.
 
-You can sign up for a OpenNode account at <https://m> for production and <https://dev.opennode.com> for testing.
+You can sign up for a OpenNode account at <https://app.opennode.com> for production and <https://dev.opennode.com> for testing.
 
 Please note, that for testing you must generate separate API credentials on <https://dev.opennode.com>. API credentials generated on <https://opennode.com> will only work in production mode.
 
