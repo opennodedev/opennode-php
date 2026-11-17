@@ -39,8 +39,7 @@ use OpenNode\OpenNode;
 
 \OpenNode\OpenNode::config(array(
     'environment'               => 'dev', // dev OR live
-    'auth_token'                => 'YOUR_AUTH_TOKEN',
-    'curlopt_ssl_verifypeer'    => TRUE // default is false
+    'auth_token'                => 'YOUR_AUTH_TOKEN'
 ));
 
 // $order = \OpenNode\Merchant\Charge::find('c1cddabe-c27b-44a6-91e8-a8f3553dc5c7');
